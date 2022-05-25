@@ -8,7 +8,8 @@ export const Container = styled.div`
 `;
 
 export const CommentList = styled.ul`
+  margin-top: 20px;
+  padding: 0;
   width: 100%;
-  margin: 0 auto;
-  padding: 0 20px;
+  list-style-type: none;
 `;

@@ -1,0 +1,53 @@
+.wrapper {
+    display: flex;
+
+}
+
+.container {
+
+}
+
+.avatar {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.rate {
+    display: flex;
+}
+
+.rateDown {
+    
+}
+
+.rateNumber {
+    
+}
+
+.rateUp {
+    
+}
+
+.description {
+    
+}
+
+.info {
+    display: flex;
+    
+}
+
+.name {
+    margin: 0;
+    
+}
+
+.date {
+    
+}
+
+.text {
+    
+}
