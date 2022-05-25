@@ -6,3 +6,9 @@ export const Container = styled.div`
   margin: 0 auto;
   padding: 0 20px;
 `;
+
+export const CommentList = styled.ul`
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+`;

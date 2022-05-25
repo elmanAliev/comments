@@ -32,7 +32,7 @@ export const FormComment = styled.form`
     position: relative;
 `;
 
-export const FormCloseButton = styled.button`
+export const CloseButton = styled.button`
     width: 32px;
     height: 32px;
     background-image: url(${closeButton});
@@ -49,4 +49,65 @@ export const FormCloseButton = styled.button`
     :hover{
         opacity: .6;
     }
+
+    :focus {
+        outline: none;   
+    }
+`;
+
+export const Input = styled.input`
+    font-family: inherit;
+    width: 100%;
+    height: 27px;
+    border: 0;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000;
+    margin-bottom: 15px;
+
+    :focus {
+        outline: none;   
+    }
+`;
+
+export const Textarea = styled.textarea`
+    font-family: inherit;
+    width: 100%;
+    height: 127px;
+    border: 0;
+    border: 1px solid rgba(0,0,0,.2);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    border-radius: 4px;
+
+    :focus {
+        outline: none;   
+    }
+`;
+
+export const SubmitButton = styled.button`
+    width: 100%;
+    height: 50px;
+    background-color: rgb(45, 45, 45);
+    color: white;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    border-radius: 4px;
+    transition: opacity 0.2s linear;
+    border: 0;
+    cursor: pointer;
+
+    :hover {
+        opacity: 0.6;
+    }
+    
 `;

@@ -2,8 +2,6 @@ import { Wrapper, Title, Button } from './HeaderStyled';
 
 export const Header = ({handleOpen}) => {
 
-
-
     return (
         <Wrapper>
             <Title>Комментарии</Title>
