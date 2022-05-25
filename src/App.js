@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Container } from './AppStyled';
+import { Header } from './components/Header/Header'
 import { Form } from './components/Form/Form'
 
 function App() {
@@ -9,16 +10,15 @@ function App() {
 
   const handleOpenPopup = () => setIsOpened(true);
   const handleClosePopup = () => {
-    console.log(1)
     setIsOpened(false);
-
   }
 
 
   return (
     <Container>
+      <Header handleOpen={handleOpenPopup} />
       {isOpened && <Form handleClose={handleClosePopup} />}
-      <button onClick={handleOpenPopup}></button>
+      {/* <button onClick={handleOpenPopup}></button> */}
     </Container>
   );
 }
