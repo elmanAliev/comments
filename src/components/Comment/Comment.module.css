@@ -1,7 +1,8 @@
 .wrapper {
     display: flex;
-    margin-bottom: 20px;
-    /* width: 100%; */
+    margin-bottom: 30px;
+    max-width: 100%;
+    
 }
 
 .container {
@@ -9,6 +10,7 @@
     flex-direction: column;
     align-items: center;
     margin-right: 20px;
+    width: 33px;
 }
 
 .avatar {
@@ -24,8 +26,7 @@
 }
 
 .rateNumber {
-    margin-bottom: 5px;
-    
+    margin-bottom: 5px;   
 }
 
 .rateDown {
@@ -63,13 +64,11 @@
     align-items: center;
     margin-bottom: 10px;
     font-size: 14px;
-    opacity: .6;
-    min-width: 100%;
+    opacity: .6;    
 }
 
 .name {
-    margin: 0;
-    
+    margin: 0;    
 }
 
 .date {
@@ -78,10 +77,12 @@
 
 .text {
     margin: 0;
+    
+    overflow-wrap: break-word;
+    width: 100%;
 }
 
 .textOpen {
     cursor: pointer;
-    opacity: .6;
-    
+    opacity: .6;   
 }

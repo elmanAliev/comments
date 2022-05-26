@@ -14,29 +14,27 @@ export const Comment = ({ name, avatar, text, date }) => {
     const handleShowComment = () => setBadRate(false);
 
     useEffect(() => {
+        const currentDate = new Date();
+        const diff = currentDate - date;
+        (diff < 1000) ? setIntervalDate('Недавно') : convertToInterval(diff)    
+    }, [])
+
+    useEffect(() => {
         (rate < -9) ? setBadRate(true) : setBadRate(false)
     }, [rate]);
 
-    function convertToInterval(milliSeconds){
+    function convertToInterval(milliSeconds) {
         let days = Math.floor(milliSeconds/(86400 * 1000));
         milliSeconds -= days*(86400*1000);
         let hours = Math.floor(milliSeconds/(60 * 60 * 1000 ));
         milliSeconds -= hours * (60 * 60 * 1000);
         let minutes = Math.floor(milliSeconds/(60 * 1000));
         
-        
-        let interval = `${minutes} мин. ${hours}ч. ${days} дн.`
+        let interval = `${minutes} мин. ${hours}ч. ${days} дн.`;
         setIntervalDate(interval)  
     }
 
-    useEffect(() => {
-        const currentDate = new Date();
-        const diff = currentDate - date;
-        (diff < 1000) ? setIntervalDate('Недавно') : convertToInterval(diff)    
-    }, [])
-
     
-
     return (
         <li className={classes.wrapper}>
             <div className={classes.container}>
@@ -57,9 +55,7 @@ export const Comment = ({ name, avatar, text, date }) => {
                     !badRate
                     ? <p className={classes.text}>{text}</p>
                     : <p onClick={handleShowComment} className={classes.textOpen}>Открыть комментарий</p>
-                }
-                
-                
+                }   
             </div>
         </li>
     );
