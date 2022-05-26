@@ -1,10 +1,14 @@
 .wrapper {
     display: flex;
-
+    margin-bottom: 20px;
+    /* width: 100%; */
 }
 
 .container {
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
 }
 
 .avatar {
@@ -12,31 +16,55 @@
     height: 30px;
     object-fit: cover;
     border-radius: 50%;
+    margin-bottom: 10px;
 }
 
 .rate {
     display: flex;
 }
 
-.rateDown {
+.rateNumber {
+    margin-bottom: 5px;
     
 }
 
-.rateNumber {
-    
+.rateDown {
+    width: 15px;
+    height: 15px;
+    background-image: url(../../images/minus.svg);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    border: 0;
+    margin-right: 3px;
 }
 
 .rateUp {
-    
+    width: 15px;
+    height: 15px;
+    background-image: url(../../images/plus.svg);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    border: 0;
 }
 
 .description {
-    
+    width: 100%;
 }
 
 .info {
     display: flex;
-    
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+    opacity: .6;
+    min-width: 100%;
 }
 
 .name {
@@ -45,9 +73,15 @@
 }
 
 .date {
-    
+    margin: 0;
 }
 
 .text {
+    margin: 0;
+}
+
+.textOpen {
+    cursor: pointer;
+    opacity: .6;
     
 }

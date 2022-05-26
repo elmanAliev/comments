@@ -7,7 +7,8 @@ export const Form = ({handleClose, onAddComment}) => {
 
     const addComment = (e) => {
         e.preventDefault();
-        onAddComment(comment);
+        const date = new Date();
+        onAddComment({...comment, date});
         handleClose();
         setComment({});
     }

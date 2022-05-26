@@ -26,6 +26,7 @@ function App() {
             name={comment.name}
             avatar={comment.avatar}
             text={comment.text}
+            date={comment.date}
             key={comment.name}
           />
         })}
