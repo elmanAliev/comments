@@ -13,17 +13,7 @@ export const Comment = ({ name, avatar, text, date }) => {
 
     const handleShowComment = () => setBadRate(false);
 
-    useEffect(() => {
-        const currentDate = new Date();
-        const diff = currentDate - date;
-        (diff < 1000) ? setIntervalDate('Недавно') : convertToInterval(diff)    
-    }, [])
-
-    useEffect(() => {
-        (rate < -9) ? setBadRate(true) : setBadRate(false)
-    }, [rate]);
-
-    function convertToInterval(milliSeconds) {
+    const convertToInterval = (milliSeconds) => {
         let days = Math.floor(milliSeconds/(86400 * 1000));
         milliSeconds -= days*(86400*1000);
         let hours = Math.floor(milliSeconds/(60 * 60 * 1000 ));
@@ -33,6 +23,16 @@ export const Comment = ({ name, avatar, text, date }) => {
         let interval = `${minutes} мин. ${hours} ч. ${days} дн.`;
         setIntervalDate(interval)  
     }
+
+    useEffect(() => {
+        const currentDate = new Date();
+        const diff = currentDate - date;
+        (diff < 1000) ? setIntervalDate('Недавно') : convertToInterval(diff)    
+    }, [])
+
+    useEffect(() => {
+        (rate < -9) ? setBadRate(true) : setBadRate(false)
+    }, [rate]);
 
     
     return (
@@ -48,7 +48,7 @@ export const Comment = ({ name, avatar, text, date }) => {
             
             <div className={classes.description}>
                 <div className={classes.info}>
-                    <h2 className={classes.name}>{name ? name : "Гость"}</h2>
+                    <h2 className={classes.name}>{name}</h2>
                     <p className={classes.date}>{intervalDate}</p>
                 </div>
                 {

@@ -12,5 +12,4 @@ export const CommentList = styled.ul`
   padding: 0;
   width: 100%;
   list-style-type: none;
-  
 `;

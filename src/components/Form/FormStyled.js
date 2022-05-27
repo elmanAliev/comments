@@ -86,7 +86,6 @@ export const Textarea = styled.textarea`
     line-height: 17px;
     color: #000;
     margin-bottom: 20px;
-    margin-top: 15px;
     border-radius: 4px;
 
     :focus {
@@ -110,5 +109,14 @@ export const SubmitButton = styled.button`
     :hover {
         opacity: 0.6;
     }
-    
+
+    :disabled {
+        cursor: auto;
+        opacity: 0.6;
+    }  
+`;
+
+export const Error = styled.div`
+    color: red;
+    font-size: 12px;
 `;
