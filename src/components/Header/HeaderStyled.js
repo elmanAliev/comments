@@ -6,6 +6,10 @@ export const Wrapper = styled.header`
     align-items: center;
     border-bottom: 2px solid #939393;
     min-height: 80px;
+
+    @media (max-width: 450px) {
+        flex-direction: column;
+    }
 `;
 
 export const Title = styled.h1`
@@ -30,5 +34,9 @@ export const Button = styled.button`
 
     :hover{
         opacity: .6;
+    }
+
+    @media (max-width: 450px) {
+        margin-bottom: 10px;
     }
 `;
