@@ -30,7 +30,7 @@ export const Comment = ({ name, avatar, text, date }) => {
         milliSeconds -= hours * (60 * 60 * 1000);
         let minutes = Math.floor(milliSeconds/(60 * 1000));
         
-        let interval = `${minutes} мин. ${hours}ч. ${days} дн.`;
+        let interval = `${minutes} мин. ${hours} ч. ${days} дн.`;
         setIntervalDate(interval)  
     }
 

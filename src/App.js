@@ -13,9 +13,8 @@ function App() {
   const handleOpenPopup = () => setIsOpened(true);
   const handleClosePopup = () => setIsOpened(false);
 
-  const handleAddComment = (newComment) => setComments([...comments, newComment]);
+  const handleAddComment = (newComment) => setComments(prev => [newComment, ...prev]);
 
-  console.log(comments)
   return (
     <Container>
       <Header handleOpen={handleOpenPopup} />
@@ -27,7 +26,7 @@ function App() {
             avatar={comment.avatar}
             text={comment.text}
             date={comment.date}
-            key={comment.name}
+            key={comment.date}
           />
         })}
       </CommentList>
